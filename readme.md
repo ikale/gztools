@@ -12,3 +12,10 @@ Tiangan(0)
 Dizhi('子')
 Dizhi(0)
 ```
+
+
+# 干支
+```
+Ganzhi('甲子')
+Ganzhi(0)
+```
