@@ -22,7 +22,10 @@ class Dao:
     def __repr__(self):
         return f"{self.__class__.__name__}<{self.name}>"
     
-    
+class Tiangan:
+    pass
+class Dizhi:
+    pass
 @lru_cache(maxsize=None)
 class Dizhi(Dao):
     _all='子丑寅卯辰巳午未申酉戌亥'
@@ -41,12 +44,11 @@ class Dizhi(Dao):
         cg = [(9,),(5,9,7),(0,2,4),(1,),(4,1,9),(2,6,4),(3,5),(5,3,1),(6,8,4),(7,),(4,7,3),(8,0)]
         return tuple((Tiangan(i) for i in cg[dz]))
     
-
 @lru_cache(maxsize=None)
 class Tiangan(Dao):
     _all='甲乙丙丁戊己庚辛壬癸'
     
-    def getShiSheng(self,arg:Union[int , str , Tiangan , Dizhi , list])->list:
+    def getShiSheng(self,arg:Union[int , str , Tiangan, Dizhi , list])->list:
         """获取十神,以自身为太极点，求十神
         """ 
         if type(arg) is str:
