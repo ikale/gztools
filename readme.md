@@ -2,7 +2,7 @@
     创建天干
     ```
     甲 = Tiangan('甲')
-    己 = Tiangan(0)
+    己 = Tiangan(5)
     ```
 
     十神查询
