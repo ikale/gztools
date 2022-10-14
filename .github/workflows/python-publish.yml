@@ -8,9 +8,12 @@
 
 name: Upload Python Package
 
-on:
-  release:
-    types: [published]
+
+    
+on: # 触发条件
+  push: # 有推送动作时触发
+    branches:
+      - main # 这里的意思是当 main分支发生push的时候，运行下面的jobs
 
 permissions:
   contents: read
