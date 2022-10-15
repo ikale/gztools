@@ -27,6 +27,7 @@ setup(
     license="Apache-2.0",  # 授权信息
     url=f"https://github.com/ikale/{APPName}",  # 官网地址 
     platforms="any",  # 适用的软件平台列表
+    python_requires='>=3.4, <4', #允许的python版本
     # install_requires=[],  # 需要安装的依赖包
     # 项目里会有一些非py文件,比如html和js等,这时候就要靠include_package_data和package_data来指定了。
     # scripts=[],  # 安装时需要执行的脚本列表
