@@ -5,5 +5,5 @@ dz = create_dizhi(1)
 print(dz.get_canggan())
 # print(dz.get_canggan().benqi)
 
-for c in dz.get_canggan():
-    print(c)
+# for c in dz.get_canggan():
+#     print(c)

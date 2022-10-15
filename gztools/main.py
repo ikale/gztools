@@ -30,14 +30,25 @@ class Canggan(Dao):
             self.__canggan = Canggan.get_canggan(self.index)
         return self.__canggan
 
+    @property
+    def name(self):
+        return self._all[self.index]+"中藏干"
+
     def __getitem__(self, index):
         return self.all[index]
 
     def __str__(self):
-        return f"{self.name}中藏{self.all}"
+        s = "本中余"
+        r=""
+        j = 0
+        for i in self.all:
+            r+=f'{s[j]}气<{i.name}>，'
+            j+=1
+        r = r[0:-1] + "。"
+        return f"{self.name}：{r}"
     
     def __repr__(self):
-        return f"{self.__class__.__name__}<{self.name}>{self.all}"
+        return f"{self.__class__.__name__}{self.all}"
 
     @staticmethod
     def get_canggan(dz:Union[int , str])->tuple:
@@ -117,7 +128,6 @@ class Ganzhi(Dao):
     def dizhi(self):
         return create_dizhi(self.name[1])
     
-
 
 
 @lru_cache(maxsize=None)
